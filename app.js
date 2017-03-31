@@ -125,7 +125,7 @@ app.post('/speakers/:id/volume', bodyParser.text({type: '*/*'}), function (req, 
   });
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8084);
 
-var ad = mdns.createAdvertisement(mdns.tcp('airfoil-api'), process.env.PORT || 8080);
+var ad = mdns.createAdvertisement(mdns.tcp('airfoil-api'), process.env.PORT || 8084);
 ad.start();
